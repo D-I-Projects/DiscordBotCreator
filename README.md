@@ -10,3 +10,6 @@
 [![issues - Destor](https://img.shields.io/github/issues/wfxey/DiscordBotCreator)](https://github.com/wfxey/DiscordBotCreator/issues)
 
 </div>
+
+#Description 
+DiscordBotCreator is a basic GUI that helps you to setup and manage your Discord Bot!
