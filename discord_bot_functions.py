@@ -9,9 +9,13 @@
 from discord.ext import commands
 from discord import app_commands, Intents
 import discord
-import datetime
 import os
 import logging
+import datetime
+
+import botVars
+
+BotVariables = botVars.BotVariables()
 
 def log_settings():
     log_dir = os.path.join("Logs")
@@ -55,15 +59,6 @@ class ResponseCommand:
         async def my_command(interaction: discord.Interaction):
             await interaction.response.send_message(response_text)
 
-class BotVariables:
-    @staticmethod
-    def time_var():
-        return datetime.datetime.now().strftime("%H:%M")
-
-    @staticmethod
-    def date_var():
-        return datetime.date.today().strftime("%Y-%m-%d")
-
 def start_client(token, adding_command_list):
     client = Client()
     add_command(adding_command_list, client)
@@ -82,4 +77,12 @@ def add_command(command_list, client):
 
 def start_bot(TOKEN, adding_command_list):
     start_client(TOKEN, adding_command_list)
+
+if __name__ == "__main__":
+    with open("TOKEN.txt") as txt_token:
+        #Please write your TOKEN in "TOKEN.txt"
+        TOKEN = txt_token.read()
+        
+    start_bot(TOKEN, [["response_command", "hi", "Hi!", "Say you hi"], ["response_command", "time", "Current date is {dateVar}, {timeVar}", "Say the current date and time"]])
+
 #Comment for the Commit Streak! (It's day 4 of doing this. xD)
