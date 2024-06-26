@@ -1,4 +1,4 @@
-[Read mor on our wiki](../../wiki)
+[Read more on our wiki](../../wiki)
 <div align="center">
   
 # DiscordBotCreator
