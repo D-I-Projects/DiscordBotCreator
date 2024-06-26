@@ -1,3 +1,4 @@
+[My Awesome Wiki](../../wiki)
 <div align="center">
   
 # DiscordBotCreator
