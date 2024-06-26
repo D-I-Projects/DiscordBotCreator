@@ -1,9 +1,10 @@
-[Read more on our wiki](../../wiki)
 <div align="center">
   
 # DiscordBotCreator
 
 *The first version is going to be released soon!*
+
+[Read more on our wiki](../../wiki)
 
 [![GitHub release](https://img.shields.io/github/release/wfxey/DiscordBotCreator?include_prereleases=&sort=semver&color=blue)](https://github.com/wfxey/DiscordBotCreator/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
