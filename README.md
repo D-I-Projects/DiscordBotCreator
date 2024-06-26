@@ -1,4 +1,4 @@
-[My Awesome Wiki](../../wiki)
+[Read mor on our wiki](../../wiki)
 <div align="center">
   
 # DiscordBotCreator
