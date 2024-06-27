@@ -12,6 +12,8 @@ import discord
 import datetime
 import os
 from log_settings import logsettings
+import BotVariables
+import threading
 
 logger = logsettings.log_settings()
 
@@ -28,16 +30,7 @@ class ResponseCommand:
     def __init__(self, command_name, response_text, client, description="..."):
         @client.tree.command(name=command_name, description=description)
         async def my_command(interaction: discord.Interaction):
-            await interaction.response.send_message(response_text)
-
-class BotVariables:
-    @staticmethod
-    def time_var():
-        return datetime.datetime.now().strftime("%H:%M")
-
-    @staticmethod
-    def date_var():
-        return datetime.date.today().strftime("%Y-%m-%d")
+            await interaction.response.send_message(replace_bot_vars(response_text))
 
 def start_client(token, adding_command_list):
     client = Client()
@@ -52,7 +45,7 @@ def replace_bot_vars(command):
 
 def add_command(command_list, client):
     for command in command_list:
-        command_name, response_text, description = command[1], replace_bot_vars(command[2]), command[3]
+        command_name, response_text, description = command[1], command[2], command[3]
         ResponseCommand(command_name, response_text, client, description)
 
 def start_bot(TOKEN, adding_command_list):
