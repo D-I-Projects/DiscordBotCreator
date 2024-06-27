@@ -57,3 +57,11 @@ def add_command(command_list, client):
 
 def start_bot(TOKEN, adding_command_list):
     start_client(TOKEN, adding_command_list)
+
+#LÖSCH DAS HIER NICHT MICH BISST DU DUMM ODER SO? LASS ES STEHEN (AN DEVIN)
+if __name__ == "__main__":
+    with open("TOKEN.txt") as txt_token:
+        #Please write your TOKEN in "TOKEN.txt"
+        TOKEN = txt_token.read()
+        
+    start_bot(TOKEN, [["response_command", "hi", "Hi!", "Say you hi"], ["response_command", "time", "Current date is {dateVar}, {timeVar}", "Say the current date and time"]])
