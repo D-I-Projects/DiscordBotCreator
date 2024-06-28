@@ -65,6 +65,29 @@ def add_variables(variables):
             variable = (f"import {lists[0]}\n" if lists[0] else "") + f"def {lists[1]}(): return {lists[2]}\n" #f"import {lists[0]}\ndef {lists[1]}(): return {lists[2]}\n"
             txt.write(variable)
 
+def delete_variable(function_name):
+    with open("botvariables.py", "r") as file:
+        lines = file.readlines()
+    
+    new_lines = []
+    inside_function = False
+
+    for line in lines:
+        if re.match(rf"def {function_name}\s*\(", line):
+            inside_function = True
+            continue
+
+        if inside_function and re.match(r"def \w+\s*\(", line):
+            inside_function = False
+
+        if inside_function:
+            continue
+
+        new_lines.append(line)
+
+    with open("botvariables.py", "w") as file:
+        file.writelines(new_lines)
+
 def read_token():
     with open("TOKEN.txt") as txt_token:
         # Please write your TOKEN in "TOKEN.txt"
@@ -79,5 +102,6 @@ def start_bot(adding_command_list):
 #Examples (If you can read german, see Example_For_Devin.txt)
 if __name__ == "__main__":
     add_variables([["sys", "test", "'hallo'"]])
+    delete_variable("test")
     start_bot([["response_command", "hi", "Hi!", "Say you hi"], ["response_command", "time", "Current date is {date_var()}, {time_var()}", "Say the current date and time"]])
 
