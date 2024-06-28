@@ -90,7 +90,7 @@ def delete_variable(function_name):
 
 def read_token():
     with open("TOKEN.txt") as txt_token:
-        # Please write your TOKEN in "TOKEN.txt"
+        # Please write your TOKEN in "TOKEN.txt" // ChatGPT generiert
         TOKEN = txt_token.read().strip()
     return TOKEN
 

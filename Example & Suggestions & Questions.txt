@@ -1,0 +1,44 @@
+#ivole32
+
+Wenn du das nur im Terminal verwenden möchtest, die GUI ist derzeit in Entwicklung!
+
+from launcher import *
+
+add_variables([["*1", "*2", "*3"]])
+delete_variable("*7")
+start_bot([["*4", "*4", "*5", "*6"], ["response_command", "time", "Das aktuelle Datum ist {date_var()}, die aktuelle Uhrzeit ist {time_var()}", "Gibt das aktuelle Datum und die Uhrzeit aus"]])
+
+
+*1 Hier fügst du die notwendigen Importe hinzu, die zur Erstellung der Variablen benötigt werden.
+*2 Hier gibst du den Namen der Variablen an.
+*3 Hier beschreibst du, wie die Variable berechnet wird, z.B.: 1 + 1.
+
+*4 Hier gibst du den Typ des Befehls an (aktuell gibt es nur "response_command"). Beispiele sind in der zweiten Liste!
+*5 Hier legst du den Namen des Befehls fest, z.B. "hello" für den Befehl /hello.
+*5 Hier kommt der Text rein, der zurückgegeben wird (mit Variablen, die in {} gesetzt werden, -> Kein formatierter String).
+*6 Hier schreibst du die Beschreibung des Befehls.
+
+*7 Hier gibst du den Namen der Variablen an, die gelöscht werden soll.
+
+Zusätzliche Information: Der Token wird automatisch aus der Datei TOKEN.txt gelesen.
+
+#Auf deutsch übersetzt
+#wfxey 
+
+1. Imports (mit komma trennen?)
+2. Name
+3. Variable response_command
+4. typ 
+5. command kürzel Beispiel : /(kürzel)
+6. Beschreibung
+7. Variable löschen mit Namen.
+
+#Vorschläge und Fragen 
+1. Wo werden die variablen gespeichert? A : In einer Python datei, einfach rein geschrieben. S : Aus einer einfachen tabelle.
+2. set_token, es soll einen direkten befehl geben der eine .env datei erstellt mit dem token der geladen wird wenn man einen bot startet.
+3. delete_token, es soll einen befhel geben der nur denn token löscht.
+4. change_token, die vorherige .env datei soll gelöscht und die neue erstellt werden, quasi set_token und delte_token zusammen.
+5. directory, die dateien sollten nicht nicht im gleichen ordner sondern platform abhängig im Program ordner gespeichert werden.
+
+Natürlich noch sehr viel mehrer sachen aber ich habe keine lust alle aufzuschreiben.
+
