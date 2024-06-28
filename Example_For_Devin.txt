@@ -4,7 +4,7 @@ add_variables([["*1", "*2", "*3"]])
 start_bot([["*4", "*4", "*5", "*6"], ["response_command", "time", "Current date is {date_var()}, {time_var()}", "Say the current date and time"]])
 
 
-*1 Hier schreibst du die imports rein, die man für das zustandekommen der Variable braucht
+*1 Hier schreibst du die imports rein, die man für das zustandekommen der Variable braucht (Kann auch leer sein aber dann einfach "" angeben)
 *2 Hier schreibst du rein, wie die Variable heißen soll
 *3 GHier schreibst du rein, wie man die Variable errechnet z.B: 1 + 1
 
