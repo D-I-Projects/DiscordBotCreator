@@ -99,7 +99,7 @@ def start_bot(adding_command_list):
     start_client(TOKEN, adding_command_list)
 
 #LÖSCH DAS HIER NICHT MICH BISST DU DUMM ODER SO? LASS ES STEHEN (AN DEVIN)
-#Examples (If you can read german, see Example_For_Devin.txt)
+#Examples in Example_Use.txt
 if __name__ == "__main__":
     add_variables([["sys", "test", "'hallo'"]])
     delete_variable("test")
