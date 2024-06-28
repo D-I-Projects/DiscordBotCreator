@@ -1,11 +1,3 @@
-#def start_bot():
-#    TOKEN = "YOUR_DISCORD_BOT_TOKEN"
-#    adding_command_list = [
-#        ["response_command", "hi", "Hi!", "Say you hi"],
-#        ["response_command", "time", "Current date is {dateVar}, {timeVar}", "Say the current date and time"]
-#    ]
-#    dbf.start_bot(TOKEN, adding_command_list)
-
 from discord.ext import commands
 from discord import app_commands, Intents
 import discord
@@ -14,6 +6,7 @@ import os
 from log_settings import logsettings
 import botvariables
 import threading
+import re
 
 logger = logsettings.log_settings()
 
@@ -38,9 +31,27 @@ def start_client(token, adding_command_list):
     client.run(token)
 
 def replace_bot_vars(command):
-    replace_rules = [["{timeVar}", botvariables.time_var()], ["{dateVar}", botvariables.date_var()]]
-    for old, new in replace_rules:
-        command = command.replace(old, new)
+    def extract_function_names():
+        with open("botvariables.py", 'r') as file:
+            content = file.read()
+
+        function_names = re.findall(r'def\s+(\w+)\s*\(', content)
+        return function_names
+
+    function_names = extract_function_names()
+    for name in function_names:
+        placeholder = f"{{{name}()}}"
+        if placeholder in command:
+            try:
+                # Dynamically get the function from botvariables module and call it
+                function = getattr(botvariables, name)
+                result = function()
+                command = command.replace(placeholder, str(result))
+            except AttributeError:
+                logger.error(f"Function {name} not found in botvariables module.")
+            except Exception as e:
+                logger.error(f"Error calling function {name}: {e}")
+
     return command
 
 def add_command(command_list, client):
@@ -48,13 +59,25 @@ def add_command(command_list, client):
         command_name, response_text, description = command[1], command[2], command[3]
         ResponseCommand(command_name, response_text, client, description)
 
-def start_bot(TOKEN, adding_command_list):
+def add_variables(variables):
+    with open("botvariables.py", "a") as txt:
+        for lists in variables:
+            variable = (f"import {lists[0]}\n" if lists[0] else "") + f"def {lists[1]}(): return {lists[2]}\n" #f"import {lists[0]}\ndef {lists[1]}(): return {lists[2]}\n"
+            txt.write(variable)
+
+def read_token():
+    with open("TOKEN.txt") as txt_token:
+        # Please write your TOKEN in "TOKEN.txt"
+        TOKEN = txt_token.read().strip()
+    return TOKEN
+
+def start_bot(adding_command_list):
+    TOKEN = read_token()
     start_client(TOKEN, adding_command_list)
 
 #LÖSCH DAS HIER NICHT MICH BISST DU DUMM ODER SO? LASS ES STEHEN (AN DEVIN)
+#Examples (If you can read german, see Example_For_Devin.txt)
 if __name__ == "__main__":
-    with open("TOKEN.txt") as txt_token:
-        #Please write your TOKEN in "TOKEN.txt"
-        TOKEN = txt_token.read()
-        
-    start_bot(TOKEN, [["response_command", "hi", "Hi!", "Say you hi"], ["response_command", "time", "Current date is {dateVar}, {timeVar}", "Say the current date and time"]])
+    add_variables([["sys", "test", "'hallo'"]])
+    start_bot([["response_command", "hi", "Hi!", "Say you hi"], ["response_command", "time", "Current date is {date_var()}, {time_var()}", "Say the current date and time"]])
+

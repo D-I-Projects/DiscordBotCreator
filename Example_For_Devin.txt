@@ -1,0 +1,16 @@
+from launcher import *
+
+add_variables([["*1", "*2", "*3"]])
+start_bot([["*4", "*4", "*5", "*6"], ["response_command", "time", "Current date is {date_var()}, {time_var()}", "Say the current date and time"]])
+
+
+*1 Hier schreibst du die imports rein, die man für das zustandekommen der Variable braucht
+*2 Hier schreibst du rein, wie die Variable heißen soll
+*3 GHier schreibst du rein, wie man die Variable errechnet z.B: 1 + 1
+
+*4 Hier wird der command type übergeben (momentan gibt es nur "response_command") Beispiele stehen in der 2. Liste!
+*5 Hier schreibst du rein, wie der command aufgerufen werden soll also "hallo" für /hallo als command
+*5 Hier kommt der Text rein, der zurpückgegeben wird (mit Variablen, die aber in {} stehen)
+*6 Hier kommt die command beschreibung rein
+
+Token wird automatisch ausgelesen
