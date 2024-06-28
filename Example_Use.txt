@@ -1,3 +1,5 @@
+If you only want to use in Terminal, the GUI is currently in development!
+
 from launcher import *
 
 add_variables([["*1", "*2", "*3"]])
