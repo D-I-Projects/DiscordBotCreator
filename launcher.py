@@ -38,7 +38,7 @@ def start_client(token, adding_command_list):
     client.run(token)
 
 def replace_bot_vars(command):
-    replace_rules = [["{timeVar}", BotVariables.time_var()], ["{dateVar}", BotVariables.date_var()]]
+    replace_rules = [["{timeVar}", botvariables.time_var()], ["{dateVar}", botvariables.date_var()]]
     for old, new in replace_rules:
         command = command.replace(old, new)
     return command
