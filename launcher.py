@@ -12,7 +12,7 @@ import discord
 import datetime
 import os
 from log_settings import logsettings
-import BotVariables
+import botvariables
 import threading
 
 logger = logsettings.log_settings()
