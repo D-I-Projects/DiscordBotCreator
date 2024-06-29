@@ -7,6 +7,10 @@ from log_settings import logsettings
 import botvariables
 import threading
 import re
+from bot_token import token
+
+#Load .env
+token.load_token()
 
 logger = logsettings.log_settings()
 
@@ -88,20 +92,6 @@ def delete_variable(function_name):
     with open("botvariables.py", "w") as file:
         file.writelines(new_lines)
 
-def read_token():
-    with open("TOKEN.txt") as txt_token:
-        # Please write your TOKEN in "TOKEN.txt" // ChatGPT generiert
-        TOKEN = txt_token.read().strip()
-    return TOKEN
-
 def start_bot(adding_command_list):
-    TOKEN = read_token()
+    TOKEN = token.read_token() #read token
     start_client(TOKEN, adding_command_list)
-
-#LÖSCH DAS HIER NICHT MICH BISST DU DUMM ODER SO? LASS ES STEHEN (AN DEVIN)
-#Examples in Example_Use.txt
-if __name__ == "__main__":
-    add_variables([["sys", "test", "'hallo'"]])
-    delete_variable("test")
-    start_bot([["response_command", "hi", "Hi!", "Say you hi"], ["response_command", "time", "Current date is {date_var()}, {time_var()}", "Say the current date and time"]])
-

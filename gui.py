@@ -6,6 +6,7 @@ from cc import cc
 import launcher as dbf
 from CTkMenuBar import *
 import sys
+from bot_token import token
 
 root = ctk.CTk()
 root.geometry("1280x720")
