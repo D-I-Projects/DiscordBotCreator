@@ -25,7 +25,7 @@ Zusätzliche Information: Der Token wird automatisch aus der Datei TOKEN.txt gel
 #Auf deutsch übersetzt
 #wfxey 
 
-1. Imports (mit komma trennen?)
+1. Imports (mit komma trennen?) Ivo: wenn du zur "errechnung" des rückgabewertes mehrere module brauchst übergubst du "modul1, modul2" -> import modul1, modul2
 2. Name
 3. Variable response_command
 4. typ 
@@ -34,11 +34,11 @@ Zusätzliche Information: Der Token wird automatisch aus der Datei TOKEN.txt gel
 7. Variable löschen mit Namen.
 
 #Vorschläge und Fragen 
-1. Wo werden die variablen gespeichert? A : In einer Python datei, einfach rein geschrieben. S : Aus einer einfachen tabelle.
-2. set_token, es soll einen direkten befehl geben der eine .env datei erstellt mit dem token der geladen wird wenn man einen bot startet.
-3. delete_token, es soll einen befhel geben der nur denn token löscht.
-4. change_token, die vorherige .env datei soll gelöscht und die neue erstellt werden, quasi set_token und delte_token zusammen.
-5. directory, die dateien sollten nicht nicht im gleichen ordner sondern platform abhängig im Program ordner gespeichert werden.
+1. Wo werden die variablen gespeichert? A : In einer Python datei, einfach rein geschrieben. S : Aus einer einfachen tabelle. Ivo: Die Variablen sind dynamisch, das heist sie werden bei jedem /command call neu gebildet
+2. set_token, es soll einen direkten befehl geben der eine .env datei erstellt mit dem token der geladen wird wenn man einen bot startet. Ivo: In arbeit
+3. delete_token, es soll einen befhel geben der nur denn token löscht. Ivo: In arbeit
+4. change_token, die vorherige .env datei soll gelöscht und die neue erstellt werden, quasi set_token und delte_token zusammen. Ivo: In arbeit
+5. directory, die dateien sollten nicht nicht im gleichen ordner sondern platform abhängig im Program ordner gespeichert werden. Ivo: Musst du mir morgen oder so mal erklären...
 
 Natürlich noch sehr viel mehrer sachen aber ich habe keine lust alle aufzuschreiben.
 
