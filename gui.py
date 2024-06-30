@@ -7,6 +7,9 @@ import launcher as dbf
 from CTkMenuBar import *
 import sys
 from bot_token import token
+from log_settings import logsettings
+
+logger = logsettings.log_settings()
 
 root = ctk.CTk()
 root.geometry("1280x720")
@@ -86,16 +89,17 @@ def switch(page_func):
         back_button.destroy()
     page_func()
 
-def main_page():
-    main_page_fm = ctk.CTkFrame(main_fm)
-    main_page_fm.pack(pady=10, padx=10, fill="both", expand=True)
+def console_page():
+    logger.info("Opened console_page.")
+    console_page_fm = ctk.CTkFrame(main_fm)
+    console_page_fm.pack(pady=10, padx=10, fill="both", expand=True)
 
-    label = ctk.CTkLabel(main_page_fm, text="DiscordBotCreator", font=("Open Sans", 26))
-    label.pack(pady=10, padx=10, side=tk.TOP)
+    label = ctk.CTkLabel(console_page_fm, text="DiscordBotCreator", font=("Open Sans", 33))
+    label.pack(pady=12, padx=10, side=tk.TOP)
 
     run_and_stop_button.configure(state=tk.NORMAL)
     
-    console_text = ctk.CTkTextbox(main_page_fm, wrap=tk.WORD, width=500, height=500)
+    console_text = ctk.CTkTextbox(console_page_fm, wrap=tk.WORD, width=500, height=500)
     console_text.pack(anchor="center", pady=10, padx=10, side=tk.BOTTOM)
     console_text.configure(scrollbar_button_color="", scrollbar_button_hover_color="")
 
@@ -110,7 +114,7 @@ def configure_page():
     configure_page_fm.pack(pady=10, padx=10, fill="both", expand=True)
     
     def back():
-        switch(main_page)
+        switch(console_page)
         
     run_and_stop_button.configure(state=tk.DISABLED)
     
@@ -127,6 +131,6 @@ run_and_stop_button.pack(pady=10, padx=10, side=tk.LEFT)
 configure_button = ctk.CTkButton(barframe, text="Configure", command=lambda: switch(configure_page))
 configure_button.pack(pady=10, padx=10, side=tk.LEFT)
 
-switch(main_page)
+switch(console_page)
 root.protocol("WM_DELETE_WINDOW", on_closing)
 root.mainloop()
