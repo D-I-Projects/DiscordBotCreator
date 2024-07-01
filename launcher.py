@@ -11,7 +11,6 @@ from bot_token import token
 
 #Load .env
 token.load_token()
-
 logger = logsettings.log_settings()
 
 class Client(commands.Bot):
@@ -47,7 +46,6 @@ def replace_bot_vars(command):
         placeholder = f"{{{name}()}}"
         if placeholder in command:
             try:
-                # Dynamically get the function from botvariables module and call it
                 function = getattr(botvariables, name)
                 result = function()
                 command = command.replace(placeholder, str(result))
@@ -95,3 +93,8 @@ def delete_variable(function_name):
 def start_bot(adding_command_list):
     TOKEN = token.read_token() #read token
     start_client(TOKEN, adding_command_list)
+
+if __name__ == "__main__":
+    #add_variables([["sys", "test", "'hallo'"]])
+    #delete_variable("test")
+    start_bot([["response_command", "hi", "Hi!", "Say you hi"], ["response_command", "time", "Current date is {date_var()}, {time_var()}", "Say the current date and time"]])
