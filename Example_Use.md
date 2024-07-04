@@ -1,6 +1,7 @@
 # Terminal Guide
 GUI is in development and will be finished soon!
 
+```
 from launcher import *
 
 add_variables([["*1", "*2", "*3"]])
@@ -20,5 +21,5 @@ start_bot([["*4", "*4", "*5", "*6"], ["response_command", "time", "Current date 
 *7 The variable name comes in here, the variable that is to be deleted 
 
 Additional information: Token is read automatically from TOKEN.txt
-
+```
 
