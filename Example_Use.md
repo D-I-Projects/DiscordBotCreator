@@ -10,11 +10,17 @@ start_bot([["*4", "*4", "*5", "*6"], ["response_command", "time", "Current date 
 ```
 
 
-### (*1) Here you enter the imports that are needed to create the variable
+### (*1)
 
-*2 Here you write what the variable should be called
+Here you enter the imports that are needed to create the variable
 
-*3 Here you write how to calculate the variable, e.g.: 1 + 1
+### (*2)
+
+Here you write what the variable should be called
+
+### (*3)
+
+Here you write how to calculate the variable, e.g.: 1 + 1
 
 *4 The command type is passed here (currently there is only "response_command") Examples are in the 2nd list!
 
