@@ -30,12 +30,6 @@ class ResponseCommand:
         async def my_command(interaction: discord.Interaction):
             await interaction.response.send_message(replace_bot_vars(response_text))
 
-"""class TextFieldCommand:
-    def __init__(self, command_name, response_text, client, description="", text_fields):
-        @app_commands.command(name=command_name, description=description)
-        async def my_command(interaction: discord.Interaction, hex_code: str):
-        
-            await interaction.response.send_message(f"The RGB value for `{hex_code}` is `{rgb}`")"""
 
 #Command adding function
 def add_command(command_list, client):
