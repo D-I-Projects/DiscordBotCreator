@@ -11,7 +11,7 @@
 [![DevSkim](https://github.com/wfxey/DiscordBotCreator/actions/workflows/devskim.yml/badge.svg?branch=main)](https://github.com/wfxey/DiscordBotCreator/actions/workflows/devskim.yml)
 [![issues - Destor](https://img.shields.io/github/issues/wfxey/DiscordBotCreator)](https://github.com/wfxey/DiscordBotCreator/issues)
 
-[![Terminal Guide](https://img.shields.io/badge/Terminal%20Guide-8A2BE2)](https://img.shields.io/badge/just%20the%20message-8A2BE2)
+[![Terminal Guide](https://img.shields.io/badge/Terminal%20Guide-8A2BE2)](https://github.com/D-I-Projects/DiscordBotCreator/wiki/Guide#terminal-guide)
 
 </div>
 
