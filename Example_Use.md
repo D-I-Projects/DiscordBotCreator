@@ -8,6 +8,7 @@ add_variables([["*1", "*2", "*3"]])
 delete_variable("*7")
 start_bot([["*4", "*4", "*5", "*6"], ["response_command", "time", "Current date is {date_var()}, {time_var()}", "Say the current date and time"]])
 
+```
 
 *1 Here you enter the imports that are needed to create the variable
 *2 Here you write what the variable should be called
@@ -21,5 +22,3 @@ start_bot([["*4", "*4", "*5", "*6"], ["response_command", "time", "Current date 
 *7 The variable name comes in here, the variable that is to be deleted 
 
 Additional information: Token is read automatically from TOKEN.txt
-```
-
