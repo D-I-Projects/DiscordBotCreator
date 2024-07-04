@@ -1,5 +1,5 @@
 # Terminal Guide
-GUI is in development and will be finished soon!
+**GUI is in development and will be finished soon!**
 
 ```
 from launcher import *
