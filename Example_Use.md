@@ -30,7 +30,7 @@ The command type is passed here (currently there is only "response_command") Exa
 
 Here you write how the command should be called, i.e. "hello" for /hello as a command
 
-### (*6) Returned response
+### (*6) - Returned response
 
 The text that is returned comes in here (with variables, but they are in {}, -> No formated String)
 
