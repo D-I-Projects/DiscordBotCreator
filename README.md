@@ -8,7 +8,6 @@
 
 [![GitHub release](https://img.shields.io/github/release/wfxey/DiscordBotCreator?include_prereleases=&sort=semver&color=blue)](https://github.com/wfxey/DiscordBotCreator/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
-![Python](https://img.shields.io/badge/Python-14354C?style=flat&logo=python&logoColor=white)
 [![DevSkim](https://github.com/wfxey/DiscordBotCreator/actions/workflows/devskim.yml/badge.svg?branch=main)](https://github.com/wfxey/DiscordBotCreator/actions/workflows/devskim.yml)
 [![issues - Destor](https://img.shields.io/github/issues/wfxey/DiscordBotCreator)](https://github.com/wfxey/DiscordBotCreator/issues)
 
