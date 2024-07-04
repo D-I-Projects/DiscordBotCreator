@@ -38,8 +38,11 @@ The text that is returned comes in here (with variables, but they are in {}, -> 
 
 The command description goes here
 
-### (*8) 
+### (*8) - Delete variable
 
 The variable name comes in here, the variable that is to be deleted 
+
+
+
 
 **Additional information: Token is read automatically from TOKEN.txt**
