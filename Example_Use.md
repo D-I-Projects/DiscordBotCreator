@@ -1,4 +1,5 @@
-If you only want to use in Terminal, the GUI is currently in development!
+# Terminal Guide
+GUI is in development and will be finished soon!
 
 from launcher import *
 
