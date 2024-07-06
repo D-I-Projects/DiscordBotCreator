@@ -8,6 +8,7 @@ from CTkMenuBar import *
 import sys
 from bot_token import token
 from log_settings import logsettings
+import tkinter as tk
 
 logger = logsettings.log_settings()
 
@@ -109,18 +110,83 @@ def console_page():
 
     update_output()
 
+def create_function_frame(parent, button_text, button_command, description_text, indicator_needed=False, fg_color=None):
+    function_frame = ctk.CTkFrame(parent, fg_color=fg_color)
+    function_frame.pack(fill=tk.X, padx=10, pady=10)
+
+    button = ctk.CTkButton(function_frame, text=button_text, command=button_command)
+    button.grid(row=0, column=0, sticky="w")
+
+    description = ctk.CTkLabel(function_frame, text=description_text, font=("Open Sans", 15))
+    description.grid(row=0, column=2, sticky="e")
+
+    return function_frame, button
+
 def configure_page():
+    logger.info("Opened configure_page.")
     configure_page_fm = ctk.CTkFrame(main_fm)
     configure_page_fm.pack(pady=10, padx=10, fill="both", expand=True)
     
+    def configure_option1(): #Just a example
+        print("Configure option 1")
+    
+    token_label = ctk.CTkLabel(configure_page_fm, text="Token", font=("Open Sans", 33))
+    token_label.pack(pady = 10, padx = 10)
+    
+    function_frame, button = create_function_frame(
+        configure_page_fm,
+        "Set token",
+        configure_option1,
+        "  Set your discord bot token.",
+    )
+    
+    function_frame, button = create_function_frame(
+        configure_page_fm,
+        "Change token",
+        configure_option1,
+        "  Change your discord bot token.",
+    )
+    
+    function_frame, button = create_function_frame(
+        configure_page_fm,
+        "Delete token",
+        configure_option1,
+        "  Delete your discord bot token.",
+    )
+    
+    theme_label = ctk.CTkLabel(configure_page_fm, text="Theme", font=("Open Sans", 33))
+    theme_label.pack(pady = 10, padx = 10)
+    
+    function_frame, button = create_function_frame(
+        configure_page_fm,
+        "Dark Mode",
+        configure_option1,
+        "  Set theme to Dark Mode",
+    )
+    
+    function_frame, button = create_function_frame(
+        configure_page_fm,
+        "Light Mode",
+        configure_option1,
+        "  Set theme to Light Mode",
+    )
+    
+    function_frame, button = create_function_frame(
+        configure_page_fm,
+        "System Mode",
+        configure_option1,
+        "  Set theme to default system design",
+    )
+    
     def back():
         switch(console_page)
-        
+    
     run_and_stop_button.configure(state=tk.DISABLED)
     
     global back_button
     back_button = ctk.CTkButton(barframe, text="Back", fg_color="red3", hover_color="red4", command=back)
     back_button.pack(padx=10, pady=10, side=tk.RIGHT)
+
     
 barframe = ctk.CTkFrame(root, width=1280, height=20)
 barframe.pack(padx=10, pady=10, side=tk.BOTTOM)
