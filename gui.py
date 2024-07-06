@@ -124,11 +124,28 @@ def create_function_frame(parent, button_text, button_command, description_text,
 
 def settings_page():
     logger.info("Opened settings_page.")
-    settings_page_fm = ctk.CTkFrame(main_fm)
+    settings_page_fm = ctk.CTkScrollableFrame(main_fm)
     settings_page_fm.pack(pady=10, padx=10, fill="both", expand=True)
     
-    def configure_option1(): #Just a example
+    def configure_option1(): #Example
         print("Configure option 1")
+    
+    general_label = ctk.CTkLabel(settings_page_fm, text="General", font=("Open Sans", 33))
+    general_label.pack(padx = 10, pady = 10)
+    
+    function_frame, button = create_function_frame(
+        settings_page_fm,
+        "Check for update",
+        configure_option1,
+        "  Check for new updates."
+    )
+    
+    function_frame, button = create_function_frame(
+        settings_page_fm,
+        "Open directory",
+        configure_option1,
+        "  Open directory for saved files."
+    )
     
     token_label = ctk.CTkLabel(settings_page_fm, text="Token", font=("Open Sans", 33))
     token_label.pack(pady = 10, padx = 10)
