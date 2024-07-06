@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 
 class token:
-    @staticmethod #ka. was das macht bzw. habe ich es vergessen gabe es aber in C# auch :D
+    @staticmethod #ka. was das macht bzw. habe ich es vergessen gab es aber in C# auch :D
     def load_token():
         load_dotenv() #eig voll unnötig aber egal
 

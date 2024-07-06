@@ -122,57 +122,57 @@ def create_function_frame(parent, button_text, button_command, description_text,
 
     return function_frame, button
 
-def configure_page():
-    logger.info("Opened configure_page.")
-    configure_page_fm = ctk.CTkFrame(main_fm)
-    configure_page_fm.pack(pady=10, padx=10, fill="both", expand=True)
+def settings_page():
+    logger.info("Opened settings_page.")
+    settings_page_fm = ctk.CTkFrame(main_fm)
+    settings_page_fm.pack(pady=10, padx=10, fill="both", expand=True)
     
     def configure_option1(): #Just a example
         print("Configure option 1")
     
-    token_label = ctk.CTkLabel(configure_page_fm, text="Token", font=("Open Sans", 33))
+    token_label = ctk.CTkLabel(settings_page_fm, text="Token", font=("Open Sans", 33))
     token_label.pack(pady = 10, padx = 10)
     
     function_frame, button = create_function_frame(
-        configure_page_fm,
+        settings_page_fm,
         "Set token",
         configure_option1,
         "  Set your discord bot token.",
     )
     
     function_frame, button = create_function_frame(
-        configure_page_fm,
+        settings_page_fm,
         "Change token",
         configure_option1,
         "  Change your discord bot token.",
     )
     
     function_frame, button = create_function_frame(
-        configure_page_fm,
+        settings_page_fm,
         "Delete token",
         configure_option1,
         "  Delete your discord bot token.",
     )
     
-    theme_label = ctk.CTkLabel(configure_page_fm, text="Theme", font=("Open Sans", 33))
+    theme_label = ctk.CTkLabel(settings_page_fm, text="Theme", font=("Open Sans", 33))
     theme_label.pack(pady = 10, padx = 10)
     
     function_frame, button = create_function_frame(
-        configure_page_fm,
+        settings_page_fm,
         "Dark Mode",
         configure_option1,
         "  Set theme to Dark Mode",
     )
     
     function_frame, button = create_function_frame(
-        configure_page_fm,
+        settings_page_fm,
         "Light Mode",
         configure_option1,
         "  Set theme to Light Mode",
     )
     
     function_frame, button = create_function_frame(
-        configure_page_fm,
+        settings_page_fm,
         "System Mode",
         configure_option1,
         "  Set theme to default system design",
@@ -194,7 +194,7 @@ barframe.pack(padx=10, pady=10, side=tk.BOTTOM)
 run_and_stop_button = ctk.CTkButton(barframe, text="Run Bot", command=thread_run_script)
 run_and_stop_button.pack(pady=10, padx=10, side=tk.LEFT)
 
-configure_button = ctk.CTkButton(barframe, text="Configure", command=lambda: switch(configure_page))
+configure_button = ctk.CTkButton(barframe, text="Settings", command=lambda: switch(settings_page))
 configure_button.pack(pady=10, padx=10, side=tk.LEFT)
 
 switch(console_page)
