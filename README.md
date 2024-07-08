@@ -14,6 +14,7 @@
 [![Terminal Guide](https://img.shields.io/badge/Terminal%20Guide-8A2BE2)](https://github.com/D-I-Projects/DiscordBotCreator/wiki/Guide#terminal-guide)
 [![GUI Guide](https://img.shields.io/badge/GUI%20Guide-FFFF00)](https://github.com/D-I-Projects/DiscordBotCreator/wiki/Guide#gui-guide)
 
+
 </div>
 
 ## Description 
