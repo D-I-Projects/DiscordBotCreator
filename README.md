@@ -21,7 +21,6 @@ DiscordBotCreator is a basic GUI that helps you to setup and manage your Discord
 
 ## License
 
-
 Released under [MIT](/LICENSE) by D&I Projects ([@wfxey](https://github.com/wfxey) and [@ivole32](https://github.com/ivole32))
 
 ## Discord
