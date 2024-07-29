@@ -95,7 +95,7 @@ def console_page():
     console_page_fm = ctk.CTkFrame(main_fm)
     console_page_fm.pack(pady=10, padx=10, fill="both", expand=True)
 
-    label = ctk.CTkLabel(console_page_fm, text="DiscordBotCreator", font=("Open Sans", 33))
+    label = ctk.CTkLabel(console_page_fm, text="DiscordBotManager", font=("Open Sans", 33))
     label.pack(pady=12, padx=10, side=tk.TOP)
 
     run_and_stop_button.configure(state=tk.NORMAL)
