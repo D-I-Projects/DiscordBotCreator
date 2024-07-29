@@ -16,7 +16,7 @@ class logsettings:
         current_datetime = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
         log_filename = os.path.join(log_dir, f"DiscordBotCreator_{current_datetime}.log")
 
-        logger = logging.getLogger("DiscordBotCreator")
+        logger = logging.getLogger("DiscordBotManager")
         logger.setLevel(logging.DEBUG)
 
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
