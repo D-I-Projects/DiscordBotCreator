@@ -1,18 +1,18 @@
 <div align="center">
   
-# DiscordBotCreator
+# DiscordBotManager
 
 *The first version is going to be released soon!*
 
 [Read more](../../wiki)
 
-[![GitHub release](https://img.shields.io/github/release/wfxey/DiscordBotCreator?include_prereleases=&sort=semver&color=blue)](https://github.com/wfxey/DiscordBotCreator/releases/)
+[![GitHub release](https://img.shields.io/github/release/wfxey/DiscordBotManager?include_prereleases=&sort=semver&color=blue)](https://github.com/wfxey/DiscordBotManager/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
-[![DevSkim](https://github.com/wfxey/DiscordBotCreator/actions/workflows/devskim.yml/badge.svg?branch=main)](https://github.com/wfxey/DiscordBotCreator/actions/workflows/devskim.yml)
-[![issues - Destor](https://img.shields.io/github/issues/wfxey/DiscordBotCreator)](https://github.com/wfxey/DiscordBotCreator/issues)
+[![DevSkim](https://github.com/wfxey/DiscordBotManager/actions/workflows/devskim.yml/badge.svg?branch=main)](https://github.com/wfxey/DiscordBotManager/actions/workflows/devskim.yml)
+[![issues - Destor](https://img.shields.io/github/issues/wfxey/DiscordBotManager)](https://github.com/wfxey/DiscordBotManager/issues)
 
-[![Terminal Guide](https://img.shields.io/badge/Terminal%20Guide-8A2BE2)](https://github.com/D-I-Projects/DiscordBotCreator/wiki/Guide#terminal-guide)
-[![GUI Guide](https://img.shields.io/badge/GUI%20Guide-FFFF00)](https://github.com/D-I-Projects/DiscordBotCreator/wiki/Guide#gui-guide)
+[![Terminal Guide](https://img.shields.io/badge/Terminal%20Guide-8A2BE2)](https://github.com/D-I-Projects/DiscordBotManager/wiki/Guide#terminal-guide)
+[![GUI Guide](https://img.shields.io/badge/GUI%20Guide-FFFF00)](https://github.com/D-I-Projects/DiscordBotManager/wiki/Guide#gui-guide)
 
 </div>
 
